@@ -1,0 +1,102 @@
+---
+title: From Data to Figures — Exercise-Induced Immune Regulation
+description: Describes the cohort dataset, its markers and its eight sampling time points, and identifies the ABA structure that makes the recovery curve interpretable.
+  Specifies the six-panel figure task, from the measured variables to the two composite indices derived from absolute cell counts.
+  Develops a reproducible figure pipeline in five steps, from a single data source to three export formats and the composed figure.
+  Requires the indices to be defined and their magnitude classified against the published literature and against the load applied in each reference study.
+examRelevant: false
+draft: false
+---
+
+import Table from '../../../components/Table.astro';
+import { Note } from '../../../components/MarginNote/index.js';
+
+
+## Table of Contents
+
+1. [The Dataset](#1-the-dataset)
+2. [The Figure Task](#2-the-figure-task)
+3. [A Reproducible Pipeline](#3-a-reproducible-pipeline)
+4. [Defining and Classifying the Indices](#4-defining-and-classifying-the-indices)
+
+---
+
+<Note>
+**Learning objectives:**
+- Describe the study design of the cohort dataset and identify its ABA structure
+- Build a reproducible figure pipeline from a single data source to SVG, PNG and PDF
+- Define the granulocyte-to-lymphocyte ratio and the systemic inflammation index from absolute counts
+- Classify the magnitude of these indices against the published literature and against the load applied
+</Note>
+
+## 1 The Dataset
+
+From here on, the work is on data the cohort generated itself. The dataset comprises 15 female participants, mean age 24 years (range 21–28). The non-clinical part covers 14 participants who performed a **one-minute sit-to-stand test (1-STST)**. Capillary immunological markers were obtained from 20 µl earlobe samples at eight time points: pre-20 and pre-10 (20 and 10 minutes before the test), p0 (immediately after), and p5, p10, p15, p30 and p45 minutes afterwards. Lactate (earlobe) and heart rate (pulse oximeter) were recorded in parallel. Markers: white blood cell count (WBC), lymphocytes (LYM, absolute and %), monocytes (MID, absolute and %), granulocytes (GRAN, absolute and %), and platelets (PLT), analysed on a Medonic M16M haematology system (Boule Medical AB, Spånga, Sweden).
+
+The eight time points are not decoration. They are the ABA design of [Lecture 3](/lectures/lecture-3) in concrete form: two baseline samples that permit an estimate of pre-test variability, one immediately post-load sample, and five recovery samples across 45 minutes. A design with a single pre and a single post value could not distinguish a genuine response from baseline noise — which becomes visible when the data are re-analysed with the two baseline samples collapsed into one.
+
+---
+
+## 2 The Figure Task
+
+<Note>
+  Assessment: this is the non-clinical part of the module examination (Prf.-Nr. 141672), worth 25 % of the sports medicine share.
+</Note>
+
+The deliverable is a single composite Figure 1 of the exposé with six panels, each showing the exercise-induced immunological stress response as boxplots with overlaid single data points, plus the infection-associated response of the clinical case as single data points:
+
+<Table>
+
+| Panel | Variable | Definition |
+|---|---|---|
+| 1A | White blood cell count | WBC, 10⁹·l⁻¹ |
+| 1B | Lactate | mmol·l⁻¹, earlobe |
+| 1C | Granulocytes | GRAN absolute, 10⁹·l⁻¹ |
+| 1D | Lymphocytes | LYM absolute, 10⁹·l⁻¹ |
+| 1E | Granulocyte-to-lymphocyte ratio | GLR = GRAN / LYM (absolute values) |
+| 1F | Systemic inflammation index | SII = PLT × GRAN / LYM |
+
+<Fragment slot="caption">
+Panels of Figure 1 of the exposé. Panels A–D are measured variables; E and F are composite indices calculated from absolute counts. Each panel carries both the group response and the case data, so that the two regulation modes can be compared within one visual frame.
+</Fragment>
+</Table>
+
+---
+
+## 3 A Reproducible Pipeline
+
+The methodological requirement is that every panel can be regenerated from the source file by running one script, without manual steps. That is a workflow, not a tool:
+
+1. **One data source.** The Excel export is read once; no manual edits, no intermediate copies. Derived columns — GLR, SII — are computed in code, never in the spreadsheet, so that the definition lives in one place and is visible in review.
+2. **Long format.** The eight time points become a categorical variable with a defined order, so that panel axes cannot silently reorder between figures.
+3. **One panel, one function.** Each panel is produced by the same plotting function with different arguments, which guarantees that axis styling, boxplot definition and point jitter are identical across A–F.
+4. **Three export formats.** SVG for editing, PNG for slides, PDF for the exposé — from the same figure object, so the three cannot diverge.
+5. **Composition.** The six panels are combined into Figure 1A–F with explicit panel labels; composition in a presentation tool is permitted by the task brief but must not alter data-bearing elements.
+
+Python with matplotlib is the reference implementation in this course; R, JASP and PExOL easyplot are equally acceptable as long as the reproducibility requirement is met. Figures are drawn in a restrained style: no gridlines competing with the data, no colour used decoratively, axis ranges chosen so that the boxplot and the case points are comparable within a panel.
+
+---
+
+## 4 Defining and Classifying the Indices
+
+The indices must be defined with reference to the literature, not invented ad hoc. Zahorec (2021) provides the background for the neutrophil-to-lymphocyte ratio, its history and its interpretive ranges; Steidten et al. (2021) apply GLR and SII in adolescent athletes in the context of overnight immune regulation and sleep; Wahl et al. (2020) report NLR and SII in the context of acute recovery interventions. Students classify the magnitude of the change they observe against these sources and — this is the part usually skipped — against the *load* used in each of those studies. A ratio change following a one-minute sit-to-stand test cannot be interpreted against reference values derived from an exhaustive interval session; stating that mismatch explicitly is a scored element of the assignment.
+
+---
+
+## One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- Why does the design use two pre-test samples rather than one?
+- Compute GLR and SII for a participant with GRAN 4.8, LYM 2.1 and PLT 250 (all ×10⁹·l⁻¹), and state the units of each index.
+- Name one reason why a lymphocyte rise immediately post-load and a lymphocyte fall at p30 are both expected.
+- Why must the load used in a reference study be reported alongside its index values?
+- Your figure looks different after re-running the script. Name two pipeline decisions that prevent this.
+
+---
+
+## References
+
+- Steidten T, Baumbach P, May R, Gabriel B, Herbsleb M, Markov A, Granacher U, Kellmann M, Bloch W, Gabriel HHW, Puta C. *Overnight immune regulation and subjective measures of sleep: a three night observational study in adolescent track and field athletes.* Front Sports Act Living 3, 2021: 689805. doi:10.3389/fspor.2021.689805.
+- Wahl P, Mathes S, Bloch W, Zimmer P. *Acute impact of recovery on the restoration of cellular immunological homeostasis.* Int J Sports Med 41 (1), 2020: 12–20. doi:10.1055/a-1015-0453.
+- Zahorec R. *Neutrophil-to-lymphocyte ratio, past, present and future perspectives.* Bratisl Lek Listy 122 (7), 2021: 474–488. doi:10.4149/BLL_2021_078.

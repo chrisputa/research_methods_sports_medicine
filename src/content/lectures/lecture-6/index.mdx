@@ -1,0 +1,82 @@
+---
+title: The Sports Medical Health Assessment II — Anthropometry and Body Composition
+description: States what the body mass index measures, how it is interpreted by percentile in children and adolescents, and where it systematically misclassifies.
+  Examines bioelectrical impedance and its error sources as the worked example of a method whose precision says nothing about its usefulness in a given population.
+  Moves from a single index to a composition profile, separating fat from adipose tissue and distribution from amount, and compares the available methods by what they actually measure.
+examRelevant: false
+draft: false
+---
+
+import Table from '../../../components/Table.astro';
+import { Note } from '../../../components/MarginNote/index.js';
+
+
+## Table of Contents
+
+1. [Height, Mass, BMI](#1-height-mass-bmi)
+2. [Bioelectrical Impedance and Its Error Sources](#2-bioelectrical-impedance-and-its-error-sources)
+3. [From Index to Profile](#3-from-index-to-profile)
+
+---
+
+<Note>
+**Learning objectives:**
+- State what BMI measures, what it correlates with, and where it systematically misclassifies
+- Apply percentile-based BMI interpretation in children and adolescents
+- Compare bioelectrical impedance, DXA and quantitative MRI in terms of what is actually measured
+- Distinguish adipose tissue from fat, and ectopic from subcutaneous fat depots
+</Note>
+
+## 1 Height, Mass, BMI
+
+Height and body mass are recorded and the body mass index calculated as mass in kilograms divided by height in metres squared. As a weight-for-height index, BMI correlates with body fat mass at the population level. For adults the threshold to overweight is 25 kg·m⁻² and to obesity 30 kg·m⁻². In children and adolescents, percentile curves are required because reference values change during development: overweight from the 90th percentile, obesity from the 97th. In addition, recording the stage of physical development can be useful in this age group. The well-known limitation applies with particular force in an athletic population: in very muscular adults, adolescents and children, high muscle mass leads BMI to misclassify them as overweight or obese (Scharhag 2021).
+
+---
+
+## 2 Bioelectrical Impedance and Its Error Sources
+
+Impedance-based systems estimate body composition from the electrical properties of the body. If standardised conditions are not strictly maintained, they fluctuate more than other methods; the classic error sources are a non-fasting state, large fluid intake before measurement, sweat, showering before measurement, and body lotion. For athletes, acute or chronic fluid shifts make the method comparatively unsuitable. The point is the worked example of a general rule: a method's precision under ideal conditions says nothing about its usefulness in the population in which it is to be applied.
+
+---
+
+## 3 From Index to Profile
+
+The conceptual step is from a single index to a composition *profile*. Two distinctions carry most of the argument (Borga et al. 2018):
+
+- **Fat is not adipose tissue.** Adipose tissue contains roughly 80 % fat, the remainder being water, protein and minerals. Methods differ in which of the two they quantify, and conflating them produces systematic discrepancies between techniques.
+- **Distribution matters more than amount.** Metabolic risk related to fat accumulation depends strongly on where the fat sits. Central obesity and, in particular, ectopic fat accumulation in liver and skeletal muscle carry the risk that a whole-body percentage cannot express. BMI is insensitive to distribution by construction.
+
+<Table>
+
+| Method | Directly measured | What it cannot tell you |
+|---|---|---|
+| BMI | Mass and height | Composition or distribution of any kind |
+| Skinfolds | Subcutaneous tissue thickness at defined sites | Visceral and ectopic depots |
+| Bioelectrical impedance | Electrical impedance; composition is modelled | Validity under fluid shifts; regional distribution |
+| DXA | Differential X-ray attenuation → fat, lean, bone mineral | Separation of adipose tissue from fat; intra-organ fat |
+| Quantitative MRI | Fat-referenced signal → adipose tissue volumes and organ fat fractions | Availability, cost, throughput |
+
+<Fragment slot="caption">
+Body composition methods compared by what they measure, not by their precision claims. The right-hand column is the question to ask of every method.
+</Fragment>
+</Table>
+
+Borga et al. (2018) report a validation of fat-referenced quantitative MRI against DXA in a large imaging cohort, showing close agreement for whole-body adipose tissue and lean tissue while the imaging method additionally resolves depot-specific and organ-specific fat. The relevant conclusion is not which method wins, but that the choice of method has to be justified by the question asked, the population studied and the resources available — the same three criteria that governed method selection in [Lecture 1](/lectures/lecture-1).
+
+---
+
+## One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- A 17-year-old weightlifter has a BMI at the 95th percentile. What do you conclude, and what would you measure next?
+- Explain the difference between fat and adipose tissue and why it produces disagreement between methods.
+- Name three conditions you would standardise before a bioimpedance measurement in an athlete, and say what each controls for.
+- Why can two people with identical body fat percentage carry very different metabolic risk?
+
+---
+
+## References
+
+- Borga M, West J, Bell JD, Harvey NC, Romu T, Heymsfield SB, Dahlqvist Leinhard O. *Advanced body composition assessment: from body mass index to body composition profiling.* J Investig Med 66 (5), 2018: 1–9. doi:10.1136/jim-2018-000722.
+- Scharhag J. *Sportmedizinische Grundlagen: Sportmedizinische Gesundheitsbeurteilung und Beratung.* In: Güllich A, Krüger M (eds), Handbuch Sport und Sportwissenschaft. Berlin, Heidelberg: Springer, 2021.

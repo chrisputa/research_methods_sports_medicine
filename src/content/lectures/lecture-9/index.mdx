@@ -1,0 +1,84 @@
+---
+title: Lactate Revisited — Shuttle, Fuel, Signal
+description: Replaces the waste-product model of lactate with its three simultaneous functions as energy substrate, gluconeogenic precursor and signalling molecule, and draws the consequence that blood lactate is a balance rather than an output.
+  Describes the three nested lactate shuttles, the transporters that mediate them, and the tracer and mechanistic evidence that makes lactate the principal circulating carbohydrate fuel.
+  Connects the shuttle concept to nutrition through the enteric and systemic postprandial lactate shuttle phases.
+examRelevant: false
+draft: false
+---
+
+import Table from '../../../components/Table.astro';
+import { Note } from '../../../components/MarginNote/index.js';
+
+
+## Table of Contents
+
+1. [The Paradigm Shift](#1-the-paradigm-shift)
+2. [The Shuttle Architecture](#2-the-shuttle-architecture)
+3. [Lactate as Dietary Carbon](#3-lactate-as-dietary-carbon)
+
+---
+
+<Note>
+**Learning objectives:**
+- State why the "lactate as waste product" model is outdated and what replaced it
+- Describe the three nested lactate shuttles and the role of monocarboxylate transporters
+- Explain lactate as gluconeogenic precursor and as signalling molecule
+- Relate the postprandial lactate shuttle to nutrition practice in athletes
+</Note>
+
+## 1 The Paradigm Shift
+
+<Note>
+  Reading: [Lecture 5 §1–3](https://chrisputa.github.io/exercise_physiology/lectures/lecture-5/) of the Exercise Physiology series. Students who intend to write the non-clinical part of the exposé on lactate should read §4 of the same page before the next lecture.
+</Note>
+
+The lactate block opens with a correction: the model most people still carry is the one the field abandoned. Lactate is not a toxic dead end of anaerobic glycolysis. It is produced continuously, including under fully aerobic conditions, and it serves three functions simultaneously: it is an **energy substrate** — a preferred fuel in heart, brain and liver; a **gluconeogenic precursor**; and a **signalling molecule** acting on metabolism and gene expression. The companion page [Lecture 5](https://chrisputa.github.io/exercise_physiology/lectures/lecture-5/) carries this argument in full with the primary literature and is the set reading for this lecture.
+
+The practical consequence for diagnostics is immediate, and it is why the paradigm shift comes before the measurement technique: a blood lactate concentration is not a measure of "anaerobiosis" but a net balance of simultaneous production and clearance. Everything the next lecture does with lactate curves follows from reading concentration as a balance rather than as an output.
+
+---
+
+## 2 The Shuttle Architecture
+
+<Table>
+
+| Level | Transfer | Functional meaning |
+|---|---|---|
+| Intracellular | Cytosol → mitochondrion | Oxidation of lactate within the producing cell |
+| Cell–cell | Glycolytic → oxidative fibres and neighbouring cells | Local redistribution of carbon within a tissue |
+| Organ–organ | Muscle → liver, muscle → brain, via the bloodstream | Systemic redistribution of substrate and gluconeogenic carbon |
+
+<Fragment slot="caption">
+The three nested lactate shuttles. Monocarboxylate transporters (MCT1, MCT4) with their chaperone CD147 mediate the transfers; the direction in each case follows concentration and pH gradients.
+</Fragment>
+</Table>
+
+Tracer work has established that circulating lactate turnover exceeds that of glucose, with the ratio rising from roughly 1.1 in the fed state to about 2.5 in the fasted state — making lactate, not glucose, the principal circulating carbohydrate fuel, and effectively decoupling glycolysis from the TCA cycle at the level of lactate (Hui et al. 2017). Beyond its role as substrate, lactate has been shown to activate the electron transport chain independently of its own metabolism: even non-metabolisable D-lactate enhances mitochondrial ATP synthesis and suppresses the Warburg effect (Cai et al. 2023). Lactate is therefore both the fuel and part of the switch that decides how fuel is used.
+
+---
+
+## 3 Lactate as Dietary Carbon
+
+A third line of evidence connects the shuttle concept to nutrition. Two postprandial phases have been described: an **enteric** phase, in which intestinal metabolism produces lactate before blood glucose rises, and a **systemic** phase, in which hepatic glucose release feeds peripheral glycolysis and returns lactate to the circulation; the systemic phase accounts for a substantial fraction of an oral glucose load (Leija et al. 2024). For applied sports nutrition this reframes what a carbohydrate feed actually delivers to working tissue.
+
+---
+
+## One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- Why is "lactate is a waste product of anaerobic metabolism" wrong on two counts?
+- Name the major lactate-producing and lactate-consuming tissues and the transporter family that connects them.
+- Explain why blood lactate concentration is a balance rather than a production rate, and give one diagnostic consequence.
+- Why does blood lactate rise before blood glucose after an oral glucose load?
+
+---
+
+## References
+
+- Brooks GA. *The science and translation of lactate shuttle theory.* Cell Metab 27 (4), 2018: 757–785. doi:10.1016/j.cmet.2018.03.008.
+- Cai X, Ng CC, Jones O, Fung TS, Ryu K, Li D, Thompson CB. *Lactate activates the mitochondrial electron transport chain independent of its metabolism.* Mol Cell 83 (21), 2023: 3904–3920.e7. doi:10.1016/j.molcel.2023.09.034.
+- Hui S, Ghergurovich JM, Morscher RJ, et al. *Glucose feeds the TCA cycle via circulating lactate.* Nature 551 (7678), 2017: 115–118. doi:10.1038/nature24057.
+- Leija RG, Curl CC, Arevalo JA, Osmond AD, Duong JJ, Huie MJ, Masharani U, Brooks GA. *Enteric and systemic postprandial lactate shuttle phases and dietary carbohydrate carbon flow in humans.* Nat Metab 6 (4), 2024: 670–677. doi:10.1038/s42255-024-00993-1.
+- Puta C. *Lactate — from waste product to central metabolic currency.* Exercise Physiology lecture series. Available from: https://chrisputa.github.io/exercise_physiology/lectures/lecture-5/

@@ -1,0 +1,108 @@
+---
+title: Lactate Performance Diagnostics — Protocols, Thresholds, Zones
+description: Explains why submaximal thresholds took over from maximal values as the informative variable of endurance diagnostics, and why the anaerobic threshold is motivation-independent.
+  Defines the aerobic and the individual anaerobic threshold, relates them to the two ventilatory thresholds, and states the limits of fixed lactate thresholds.
+  Lists the design decisions of a lactate step test and their consequences, together with the quality criteria of the procedure as a whole.
+  Derives training zones from the individual anaerobic threshold and interprets rightward and leftward curve shifts, including the clinical caveat in post-exertional malaise.
+examRelevant: false
+draft: false
+---
+
+import Table from '../../../components/Table.astro';
+import { Note } from '../../../components/MarginNote/index.js';
+
+
+## Table of Contents
+
+1. [Why Thresholds Rather Than Maxima](#1-why-thresholds-rather-than-maxima)
+2. [The Two Thresholds](#2-the-two-thresholds)
+3. [Protocol and Measurement](#3-protocol-and-measurement)
+4. [Zones and Curve Shifts](#4-zones-and-curve-shifts)
+
+---
+
+<Note>
+**Learning objectives:**
+- Define the aerobic threshold and the individual anaerobic threshold and relate them to VT1 and VT2
+- Justify why fixed lactate thresholds are inadequate and when they may still be used
+- Construct a step protocol suitable for lactate diagnostics and name its error sources
+- Derive training zones from the individual anaerobic threshold and interpret curve shifts
+</Note>
+
+## 1 Why Thresholds Rather Than Maxima
+
+The classical laboratory principle of performance testing is spiroergometry with measurement of V̇O₂max. There is, however, a clear discrepancy between sport-specific performance development — for example in long-distance running, where performance is well measurable — and the increase in V̇O₂max. Already in the 1960s and 1970s, values around or above 80 ml·min⁻¹·kg⁻¹ were being reported, and the same holds for heart volumes, whose maximal values approached 20 ml·kg⁻¹ three decades ago (Kindermann 2004). When maximal values converge at the top of a discipline, they stop discriminating, and the submaximal threshold takes over as the informative variable. The anaerobic threshold is additionally motivation-independent, which the maximal test is not.
+
+---
+
+## 2 The Two Thresholds
+
+**Aerobic threshold (AeS/AeT)** — the point of the first systematic rise of lactate above baseline; it marks the beginning of the aerobic–anaerobic transition and is assigned to the first ventilatory threshold (VT1). **Individual anaerobic threshold (IAS/IAT)** — the upper boundary of the aerobic–anaerobic transition, representing the maximal lactate steady state: the highest workload at which production and elimination remain in equilibrium. It is assigned to VT2 / the respiratory compensation point, which lies in its region without being point-identical. Above the anaerobic threshold, lactate concentration rises during prolonged constant-intensity work despite unchanged intensity; this is what makes the threshold a genuine physiological breakpoint rather than a convention (Kindermann 2004).
+
+Individual thresholds permit a more reliable assessment of endurance capacity and a more reliable steering of intensity than fixed lactate thresholds. The fixed 4 mmol·l⁻¹ value remains defensible only as a coarse group-level orientation, because the lactate concentration at the maximal steady state varies substantially with training status, muscle fibre composition, glycogen status and the protocol used. Method-based determinations — among them the approach of Stegmann et al. (1981), which incorporates lactate kinetics during recovery — make the individual determination explicit rather than assumed.
+
+---
+
+## 3 Protocol and Measurement
+
+<Table>
+
+| Decision | Consequence |
+|---|---|
+| Step duration (≥3 min vs. shorter) | Shorter steps do not reach a within-step steady state; thresholds shift to higher loads |
+| Step vs. ramp protocol | Step protocols suit lactate; ramp protocols suit ventilatory thresholds |
+| Sampling site (earlobe vs. fingertip vs. venous) | Systematically different concentrations; sites must not be mixed within a study |
+| Analyser and sample handling | Device-specific calibration; haemolysis and delay change the value |
+| Modality (cycling vs. running) | Thresholds are modality-specific; transfer requires sport-specific retesting |
+| Pre-test state (nutrition, glycogen, prior training, circadian phase) | Resting lactate alone varies roughly 0.8–2.0 mmol·l⁻¹ |
+
+<Fragment slot="caption">
+Design decisions in lactate diagnostics. Each row is a place where an unconsidered choice silently changes the threshold that comes out at the end — which is why the protocol must be documented as part of the result.
+</Fragment>
+</Table>
+
+Röcker (2019) treats these as the substance of the method rather than as footnotes: the quality criteria of lactate diagnostics — validity, reliability, objectivity and practicability — are properties of the whole procedure, not of the analyser. Field step tests, for example a running protocol with 3-minute steps and stepwise increases of roughly 2 km·h⁻¹, are the practicable variant, with their specific limitations on blood sampling and on environmental standardisation.
+
+---
+
+## 4 Zones and Curve Shifts
+
+<Table>
+
+| Zone | % IAT | Typical lactate | Purpose |
+|---|---|---|---|
+| Regenerative | &lt; 70 % | &lt; 2 mmol·l⁻¹ | Recovery |
+| Basic endurance I (GA I) | 70–90 % | ~1.5–2.5 mmol·l⁻¹ | Aerobic base |
+| Basic endurance II (GA II) | 90–100 % | ~3–5 mmol·l⁻¹ | Intensive aerobic work |
+| Interval / competition-specific | &gt; 100 % | variable | Supra-threshold efforts |
+
+<Fragment slot="caption">
+Training zones expressed as a percentage of the individual anaerobic threshold. Lactate values are orienting ranges, not definitions; the zone is defined by intensity relative to the threshold, not by a concentration.
+</Fragment>
+</Table>
+
+Longitudinally, the shape of the curve carries the message. A **rightward shift** — the same lactate concentration now occurring at a higher workload — indicates improved mitochondrial capacity, enhanced monocarboxylate transporter expression and better fat oxidation, and is the signature of successful endurance adaptation. A **leftward shift** indicates that lactate accumulates at lower workloads and signals detraining, overreaching, acute infection or post-infectious deconditioning. Repeated testing with attention to test–retest variability is required before a shift is called; a single pair of curves within the measurement error is not a finding.
+
+**Clinical caveat.** Patients with ME/CFS and Long COVID can show pathological leftward shifts at minimal effort. In these groups, zone-based prescription derived from a threshold test may be actively harmful, and the diagnostic question reverts to the one posed in [Lecture 3](/lectures/lecture-3): is exertion a tolerable stimulus at all?
+
+---
+
+## One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- Why is a step duration of at least three minutes required for lactate diagnostics but not for ventilatory thresholds?
+- Define the maximal lactate steady state and explain why it is a breakpoint rather than a convention.
+- An athlete's curve has shifted left by 15 W at 4 mmol·l⁻¹ since the last test. Name four possible explanations and the information you would need to decide between them.
+- Why does the anaerobic threshold outperform V̇O₂max as an endurance indicator in an elite cohort?
+- Give two reasons why a fixed 4 mmol·l⁻¹ threshold can mislead.
+
+---
+
+## References
+
+- Beneke R. *Maximal lactate steady state concentration (MLSS): experimental and modelling approaches.* Eur J Appl Physiol 88 (4–5), 2003: 361–369. doi:10.1007/s00421-002-0713-2.
+- Heck H, Mader A, Hess G, Mücke S, Müller R, Hollmann W. *Justification of the 4-mmol/l lactate threshold.* Int J Sports Med 6 (3), 1985: 117–130. doi:10.1055/s-2008-1025824.
+- Kindermann W. *Anaerobe Schwelle.* Dtsch Z Sportmed 55 (6), 2004: 161–162.
+- Röcker K. *Sportmedizinische Anwendung: Laktat- und Leistungsdiagnostik.* In: Güllich A, Krüger M (eds), Handbuch Sport und Sportwissenschaft. Berlin, Heidelberg: Springer, 2019. doi:10.1007/978-3-662-53386-4_24-1.
+- Stegmann H, Kindermann W, Schnabel A. *Lactate kinetics and individual anaerobic threshold.* Int J Sports Med 2 (3), 1981: 160–165. doi:10.1055/s-2008-1034604.

@@ -1,0 +1,85 @@
+---
+title: Ergometry and the Exercise ECG
+description: Compares cycle and treadmill ergometry and the consequences of the choice for attainable maximal values and ECG quality.
+  Develops the construction of a step protocol from starting load, increment, step duration and monitoring, and the reasoning behind each setting.
+  Separates exhaustion criteria from termination criteria and states the safety requirements, indications and contraindications of the exercise ECG as a provocation test.
+  Gives mass-related reference expectations for maximal power and treadmill speed across training states and age.
+examRelevant: false
+draft: false
+---
+
+import Table from '../../../components/Table.astro';
+import { Note } from '../../../components/MarginNote/index.js';
+
+
+## Table of Contents
+
+1. [Choice of Ergometer](#1-choice-of-ergometer)
+2. [Protocol Construction](#2-protocol-construction)
+3. [Exhaustion Criteria versus Termination Criteria](#3-exhaustion-criteria-versus-termination-criteria)
+4. [Reference Expectations](#4-reference-expectations)
+
+---
+
+<Note>
+**Learning objectives:**
+- Choose between cycle and treadmill ergometry and justify the choice
+- Construct a step protocol with defensible starting load, increment and step duration
+- Apply exhaustion criteria and termination criteria, and distinguish them from each other
+- Interpret mass-related maximal power values against reference expectations
+</Note>
+
+## 1 Choice of Ergometer
+
+In Europe, cycle ergometry is the most common form for testing function, loadability and cardiovascular capacity; for runners a treadmill test can be more appropriate. Other forms — arm crank, rowing ergometry — are used for specific questions. Treadmill ergometry recruits a larger muscle mass and permits roughly 10 % higher cardiopulmonary exhaustion, at the cost of poorer ECG quality due to motion artefacts. Maximal attainable heart rate differs accordingly: approximately 220 minus age for treadmill, approximately 200 minus age for seated cycle ergometry (Scharhag 2021, after Kindermann). These are orienting expectations with substantial inter-individual scatter, not formulas to prescribe from.
+
+---
+
+## 2 Protocol Construction
+
+<Table>
+
+| Parameter | Typical setting | Rationale |
+|---|---|---|
+| Starting load (cycle) | 25 or 50 W in patients; 100 W in (high-)performance athletes | Enough steps to resolve the curve without premature exhaustion |
+| Increment | 25 or 50 W | Matched to expected maximum so that 5–8 steps are completed |
+| Step duration | 2 min (WHO standard) or 3 min (sports medicine standard) | ≥3 min required for a lactate steady state within the step |
+| Treadmill increment | 1 or 2 km·h⁻¹; from 7 km·h⁻¹ in walking, e.g. +3 % gradient per step | Keeps the increment physiologically comparable across the range |
+| Monitoring | Continuous 12-lead ECG; blood pressure at the end of each step | Exercise ECG is a provocation test |
+
+<Fragment slot="caption">
+Protocol parameters and the reasoning behind each. The 3-minute step duration is the constraint that ties ergometric protocol design to lactate diagnostics: a lactate steady state within a step requires at least three minutes.
+</Fragment>
+</Table>
+
+---
+
+## 3 Exhaustion Criteria versus Termination Criteria
+
+These two families of criteria are routinely confused in student reports and are therefore separated explicitly. **Exhaustion criteria** indicate that a maximal test has in fact been maximal: attainment of the expected maximal heart rate, a maximal lactate concentration above about 8 mmol·l⁻¹, and — protocol-dependent — a respiratory quotient above roughly 1.10 in spiroergometry. **Termination criteria** require immediate cessation regardless of whether exhaustion has been reached: angina pectoris or severe dyspnoea, a fall in heart rate, a fall in blood pressure, a hypertensive response with values around 250/140 mmHg, significant ST depression or elevation, and higher-grade arrhythmia.
+
+Because the exercise ECG is a provocation test in which life-threatening emergencies can occur, a person trained in cardiopulmonary resuscitation and emergency equipment — defibrillator, emergency drugs, oxygen, bag valve mask, intubation set — must be present. Indication and contraindications are established by a physician, who supervises the test and terminates it when termination criteria appear. Contraindications include the immediate period after acute myocardial infarction, acute coronary syndrome, unstable angina, ECG signs of ischaemia, decompensated heart failure, high-grade aortic stenosis, myocarditis and acute pulmonary embolism.
+
+---
+
+## 4 Reference Expectations
+
+For seated cycle ergometry with 3-minute steps, mass-related maximal power gives an orientation: untrained men and women aged 20–30 reach roughly 3.0 and 2.5 W·kg⁻¹ respectively; recreational and non-endurance competitive athletes about 4 W·kg⁻¹; endurance-trained competitive athletes about 5 W·kg⁻¹; and highly endurance-trained elite athletes about 6 W·kg⁻¹, with women roughly 15–20 % lower. From the age of 30, a decrease of about 10 % per decade is expected. For treadmill tests with 3-minute steps, healthy normal-weight untrained men aged 20–30 typically reach 12–14 km·h⁻¹, recreational athletes 14–16, competitive athletes 16–20 depending on the sport, and highly endurance-trained runners at least 20 km·h⁻¹, with women approximately 1–2 km·h⁻¹ lower (Scharhag 2021).
+
+---
+
+## One-Minute-Paper Topics
+<Note>
+  A **One-Minute-Paper** (OMP) is a short, focused prompt that students answer in ~60 seconds at the end of a session to consolidate learning, surface misconceptions, and provide formative feedback.  When answering, be concise, specific, and use terminology from today's session.
+</Note>
+- Design a cycle protocol for a 24-year-old female team-sport athlete. Justify starting load, increment and step duration.
+- A test is terminated at 220 W because systolic pressure reached 255 mmHg. Was the test maximal? Answer using the two criterion families.
+- Why does a treadmill test yield higher maximal values but a worse ECG trace?
+- An untrained 45-year-old man reaches 2.6 W·kg⁻¹. Interpret this value.
+
+---
+
+## References
+
+- Scharhag J. *Sportmedizinische Grundlagen: Sportmedizinische Gesundheitsbeurteilung und Beratung.* In: Güllich A, Krüger M (eds), Handbuch Sport und Sportwissenschaft. Berlin, Heidelberg: Springer, 2021.
+- Tanaka H, Monahan KD, Seals DR. *Age-predicted maximal heart rate revisited.* J Am Coll Cardiol 37 (1), 2001: 153–156. doi:10.1016/s0735-1097(00)01054-8.
