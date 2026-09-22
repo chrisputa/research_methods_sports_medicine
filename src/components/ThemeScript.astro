@@ -1,0 +1,19 @@
+<script is:inline>
+  (function () {
+    try {
+      localStorage.removeItem('theme');
+    } catch {}
+
+    try {
+      const mql = window.matchMedia('(prefers-color-scheme: dark)');
+      const apply = (dark) => {
+        document.documentElement.classList.toggle('dark', !!dark);
+        if (typeof syncWidgetDarkMode === 'function') syncWidgetDarkMode(!!dark);
+      };
+
+      apply(mql.matches);
+      mql.addEventListener('change', (e) => apply(e.matches));
+      document.addEventListener('astro:after-swap', () => apply(mql.matches));
+    } catch {}
+  })();
+</script>
